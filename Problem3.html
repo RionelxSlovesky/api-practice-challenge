@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 1em;
+        }
+        .inner-container {    
+            padding: 2em;
+        }
+
+        .car-img {
+            width: 100%;
+            object-fit: cover;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="dd-container">
+        <select id="region-dd" onchange="showByRegion();">
+            <option value="all">All</option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+        <select id="language-dd" onchange="showByLanguage();">
+            <option value="all">Any</option>
+            <option value="english">English</option>
+            <option value="german">German</option>
+            <option value="spanish">Spanish</option>
+            <option value="russian">Russian</option>
+            <option value="french">French</option>
+        </select>
+    </div>
+
+    <div id="container">
+        
+
+
+    </div>
+    
+
+
+
+    <script src="problem3script.js"></script>
+</body>
+</html>
