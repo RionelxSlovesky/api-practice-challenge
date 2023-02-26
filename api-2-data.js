@@ -1,3 +1,5 @@
+const container = document.getElementById('container');
+
 const data = [
     {
       _id: "60795d4e0489a32f948c4167",
@@ -32,3 +34,22 @@ const data = [
       
     },
   ];
+
+
+  const showCars = data => {
+
+    data.forEach(car => {
+        container.innerHTML += `
+          <div class="inner-container">
+
+              <img class="car-img" src="${car.imageURL ? car.imageURL : "https://i.ibb.co/54WzQjR/Honda.png"}" alt="">
+              <h3>Car Name: ${car.name}</h3>
+              <p>Car Detail: ${car.description}</p>
+              <button>Car Price: ${car.price}</button>
+          </div>
+        `
+    })
+
+  }
+
+  showCars(data);
